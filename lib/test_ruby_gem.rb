@@ -2,6 +2,7 @@
 
 
 require_relative "test_ruby_gem/version"
+require 'concurrent'
 require "test_ruby_gem/base_exporter"
 require "test_ruby_gem/puma_exporter"
 
