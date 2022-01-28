@@ -1,3 +1,4 @@
+
 module TestRubyGem
     class BaseExporter
         attr_reader :timer_task
