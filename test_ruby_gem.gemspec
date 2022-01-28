@@ -26,11 +26,13 @@ Gem::Specification.new do |spec|
       (f == __FILE__) || f.match(%r{\A(?:(?:test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
     end
   end
-  spec.files += Dir['lib/*.rb'] + Dir['lib/**/*'] + Dir['lib/**/*.rb'] + Dir['bin/*']
+  spec.files += Dir['lib/*.rb'] + Dir['lib/**/*'] + Dir['lib/test_ruby_gem/*.rb'] + Dir['bin/*']
   spec.files += Dir['[A-Z]*'] + Dir['test/**/*']
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+#   spec.require_paths = ["lib"]
+  spec.require_paths = %w[lib, lib/test_ruby_gem]
+
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
