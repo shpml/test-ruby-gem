@@ -4,7 +4,7 @@ module TestRubyGem
         attr_reader :timer_task
 
         def initialize
-            @timer_task = Concurrent::TimerTask.new(execution_interval: 5, timeout_interval: 5) do
+            @timer_task = ::Concurrent::TimerTask.new(execution_interval: 5, timeout_interval: 5) do
             call
             end
         end
