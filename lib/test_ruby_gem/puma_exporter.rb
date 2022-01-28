@@ -1,5 +1,3 @@
-require 'base_exporter'
-
 module TestRubyGem
     class PumaExporter < BaseExporter
         def call
