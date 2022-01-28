@@ -1,7 +1,8 @@
 module TestRubyGem
     class PumaExporter < BaseExporter
         def call
-            stats = ::Puma.stats
+            puts "ping pong"
+            stats = Puma.stats
             pp stats
         end
     end
