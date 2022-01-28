@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
       (f == __FILE__) || f.match(%r{\A(?:(?:test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
     end
   end
-  spec.files += Dir['lib/*.rb'] + Dir['lib/**/*.rb']+ Dir['bin/*']
+  spec.files += Dir['lib/*.rb'] + Dir['lib/**/*'] + Dir['lib/**/*.rb'] + Dir['bin/*']
   spec.files += Dir['[A-Z]*'] + Dir['test/**/*']
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
