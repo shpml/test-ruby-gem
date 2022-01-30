@@ -1,11 +1,11 @@
 
 module TestRubyGem
     class BaseExporter
-        attr_reader :timer_task
+        attr_reader :timer_task, :execution_interval, :timeout_interval
 
-        def initialize
+        def initialize(execution_interval: 5, timeout_interval: 5)
             puts "BaseExporter initialize"
-            @timer_task = ::Concurrent::TimerTask.new(execution_interval: 5, timeout_interval: 5) do
+            @timer_task = ::Concurrent::TimerTask.new(execution_interval: execution_interval, timeout_interval: timeout_interval) do
                 call
             end
         end

@@ -1,5 +1,6 @@
 module TestRubyGem
     class PumaExporter < BaseExporter
+
         def call
             puts "PumaExporter call"
             sleep(1) until puma?
@@ -11,5 +12,6 @@ module TestRubyGem
             puts "PumaExporter puma?"
             !!defined?(::Puma)
         end
+
     end
 end
