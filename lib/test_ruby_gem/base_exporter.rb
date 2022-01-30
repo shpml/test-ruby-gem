@@ -12,7 +12,7 @@ module TestRubyGem
 
         def start
             puts "BaseExporter start"
-            timer_task.execute
+            @timer_task.execute
         end
 
         def call
